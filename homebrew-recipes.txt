@@ -2,6 +2,7 @@
   crystal-lang
   cscope
   ctags
+  dep
   elixir
   erlang
   ffmpeg
