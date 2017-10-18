@@ -154,6 +154,7 @@ nnoremap <silent> <leader>u :GundoToggle<cr>
 nnoremap <silent> <leader>gtd :YcmCompleter GoToDefinition<cr>
 nnoremap <silent> <leader>gtr :YcmCompleter GoToReferences<cr>
 nnoremap <silent> <leader>gts :YcmCompleter GetDoc<cr>
+nnoremap <silent> <leader>gtl :YcmDiags<cr>
 nnoremap <silent> <leader>vs :Gstatus<cr>
 nmap <silent> <leader>d <Plug>DashSearch
 
