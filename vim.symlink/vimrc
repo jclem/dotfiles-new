@@ -53,7 +53,7 @@ set lazyredraw
 set linespace=1
 set list
 set nocursorline
-set number
+set nonumber
 set numberwidth=4
 set showcmd
 set showmode
@@ -175,6 +175,15 @@ nnoremap <silent> <leader>rp :VimuxRunLastCommand<cr>
 noremap <silent> <leader>rc :VimuxInterruptRunner<cr>
 noremap <silent> <leader>rx :VimuxCloseRunner<cr>
 noremap <silent> <leader>rz :VimuxZoomRunner<cr>
+nnoremap <silent> <leader>n :call NumberToggle()<cr>
+
+function! NumberToggle()
+  if &number
+    set nonumber
+  else
+    set number
+  endif
+endfunction
 
 " Vim doesn't do normal escape with Ctrl+C
 inoremap <c-c> <esc>
