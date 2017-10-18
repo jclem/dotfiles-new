@@ -3,6 +3,7 @@ set nocompatible
 call plug#begin()
 
 Plug '/usr/local/opt/fzf'
+Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
@@ -36,7 +37,7 @@ set ruler
 set statusline=%f\ %y\ %h%m%r%w%=%l/%L
 
 " Visual styling
-colorscheme Tomorrow-Night
+colorscheme solarized
 set colorcolumn=80
 set guifont=SF\ Mono:h13
 set guioptions=
