@@ -43,7 +43,7 @@ set ruler
 set statusline=%f\ %y\ %h%m%r%w%=%l/%L
 
 " Visual styling
-colorscheme solarized
+colorscheme tomorrow-night
 set background=dark
 set colorcolumn=80
 set guifont=SF\ Mono:h13
