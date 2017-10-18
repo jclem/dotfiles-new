@@ -43,11 +43,6 @@ function! NumberToggle()
   endif
 endfunction
 
-function! HighlightOverLength()
-  highlight! OverLength ctermbg=darkred
-  match OverLength /\%>80v.\+/
-endfunction
-
 " Editing
 set backspace=indent,eol,start
 set hidden
@@ -61,6 +56,7 @@ colorscheme Tomorrow-Night
 set background=dark
 set guifont=SF\ Mono:h13
 set guioptions=
+set colorcolumn=80
 set laststatus=2
 set lazyredraw
 set linespace=1
@@ -76,7 +72,6 @@ set fillchars=vert:│
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 autocmd ColorScheme * highlight! VertSplit ctermbg=NONE
-autocmd ColorScheme * call HighlightOverLength()
 let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 " Netrw
