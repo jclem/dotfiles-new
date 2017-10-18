@@ -1,0 +1,29 @@
+  aws-shell
+  cscope
+  erlang
+  elixir
+  ffmpeg
+  fzf
+  git
+  htop
+  httpie
+  hub
+  imagemagick
+  jq
+  macvim --with-luajit --with-python3
+  node
+  postgresql --with-python3
+  pstree
+  python
+  python3
+  redis
+  ruby
+  the_silver_searcher
+  tig
+  tmux
+  tree
+  vimpager
+  wget
+  wxmac
+  yarn
+  zsh

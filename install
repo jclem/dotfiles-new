@@ -19,7 +19,7 @@ create_link () {
 # A: Remove and re-link all following symbolic links
 # q: Quit and exit with exit code 1
 link_exists_prompt () {
-  echo "$fg[yellow]  ☆  $2 already exists. Overwrite? [(Y)es (n)o (A)ll (q)uit]$reset_color"
+  echo "$fg[yellow]  ☆  $2 already exists. Overwrite? [(Y)es (n)o (A)ll (N)o all (q)uit]$reset_color"
 
   read -ks action
 
@@ -28,8 +28,12 @@ link_exists_prompt () {
       create_link $1 $2
       ;;
     A)
-      link_all=0
+      link_all=1
       create_link $1 $2
+      ;;
+    N)
+      link_none=1
+      echo "$fg[red]  ☆  Not linking $1.$reset_color"
       ;;
     q)
       echo "$fg[red]Goodbye.$reset_color"
@@ -54,11 +58,62 @@ for symlink (./**/*.symlink) {
     create_link $link_to_path $link_from_path
   else
     if [ -e $link_from_path ] || [ -L $link_from_path ]; then
-      link_exists_prompt $link_to_path $link_from_path
+      if [ $link_none ]; then
+        echo "$fg[red]  ☆  Not linking $link_to_path.$reset_color"
+      else
+        link_exists_prompt $link_to_path $link_from_path
+      fi
     else
       create_link $link_to_path $link_from_path
     fi
   fi
 }
+
+if [[ "$(command -v brew)" == "" ]]; then
+  echo "\n$fg[green]Installing Homebrew$reset_color"
+  /usr/bin/ruby -e \
+    "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+echo "\n$fg[green]Installing Homebrew recipes$reset_color"
+
+while read recipe; do
+  if [ $install_none ]; then
+    echo "$fg[red]  ☆  Not installing $recipe.$reset_color"
+    continue
+  fi
+
+  if [ $install_all ]; then
+    echo "$fg[green]  ☆  Installing $recipe.$reset_color"
+    brew install $(echo $recipe)
+    continue
+  fi
+
+  echo "\n  Install $fg[green]$recipe$reset_color? [(Y)es (n)o (A)ll (N)o all (q)uit]"
+
+  read -ks action
+
+  case $action in
+    Y)
+      echo "$fg[green]  ☆  Installing $recipe.$reset_color"
+      brew install $(echo $recipe)
+      ;;
+    A)
+      install_all=1
+      echo "$fg[green]  ☆  Installing $recipe.$reset_color"
+      brew install $(echo $recipe)
+      ;;
+    N)
+      install_none=1
+      echo "$fg[red]  ☆  Not installing $recipe.$reset_color"
+      ;;
+    q)
+      echo "$fg[red]Goodbye.$reset_color"
+      exit 1
+      ;;
+    *)
+      echo "$fg[red]  ☆  Not installing.$reset_color"
+  esac
+done < ./homebrew-recipes.txt
 
 exit 0
