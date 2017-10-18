@@ -191,6 +191,7 @@ nnoremap <silent> [q :cprev<cr>
 nnoremap <silent> ]Q :clast<cr>
 nnoremap <silent> [Q :cfirst<cr>
 nnoremap <silent> <leader>go :Unite outline<cr>
+nnoremap <silent> <leader>% :let @+ = join([expand("%"), line(".")], ":")<cr>
 
 " Vim doesn't do normal escape with Ctrl+C
 inoremap <c-c> <esc>
