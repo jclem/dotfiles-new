@@ -77,6 +77,15 @@ fi
 
 echo "\n$fg[green]Installing Homebrew recipes$reset_color"
 
+homebrew_install() {
+  if [[ "$(brew --prefix $1 2>/dev/null)" == "" ]]; then
+    echo "$fg[green]  ☆  Installing $1.$reset_color"
+    brew install $@
+  else
+    echo "$fg[yellow]  ☆  $1 already installed.$reset_color"
+  fi
+}
+
 while read recipe; do
   if [ $install_none ]; then
     echo "$fg[red]  ☆  Not installing $recipe.$reset_color"
@@ -84,8 +93,7 @@ while read recipe; do
   fi
 
   if [ $install_all ]; then
-    echo "$fg[green]  ☆  Installing $recipe.$reset_color"
-    brew install $(echo $recipe)
+    homebrew_install $(echo $recipe)
     continue
   fi
 
@@ -95,13 +103,11 @@ while read recipe; do
 
   case $action in
     Y)
-      echo "$fg[green]  ☆  Installing $recipe.$reset_color"
-      brew install $(echo $recipe)
+      homebrew_install $(echo $recipe)
       ;;
     A)
       install_all=1
-      echo "$fg[green]  ☆  Installing $recipe.$reset_color"
-      brew install $(echo $recipe)
+      homebrew_install $(echo $recipe)
       ;;
     N)
       install_none=1
