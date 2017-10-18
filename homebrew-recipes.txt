@@ -11,6 +11,7 @@
   imagemagick
   jq
   macvim --with-luajit --with-python3 --with-override-system-vim
+  mosh
   node
   postgresql --with-python3
   pstree
