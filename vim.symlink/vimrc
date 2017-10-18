@@ -5,6 +5,7 @@ call plug#begin()
 Plug '/usr/local/opt/fzf'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
+Plug 'jclem/ale'
 Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
@@ -18,7 +19,6 @@ Plug 'sjl/gundo.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --clang-completer --racer-completer --tern-completer' }
 
 call plug#end()
 
@@ -138,6 +138,7 @@ let g:NERDTreeNaturalSort=1
 
 " tsuquyomi
 let g:tsuquyomi_definition_split=1
+let g:tsuquyomi_disable_quickfix=1
 
 " dash.vim
 let g:dash_activate=0
@@ -195,3 +196,6 @@ nnoremap <leader>fm :Marks<cr>
 nnoremap <leader>fs :Snippets<cr>
 nnoremap <leader>fg :GFiles?<cr>
 nnoremap <leader>fw :Windows<cr>
+
+set exrc
+set secure

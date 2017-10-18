@@ -243,6 +243,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
         if has("gui_running")
           call <SID>X("Normal", s:foreground, s:background, "")
         endif
+	call <SID>X("ALEError", "", s:selection, "")
 	call <SID>X("LineNr", s:selection, "", "")
 	call <SID>X("NonText", s:selection, "", "")
 	call <SID>X("SpecialKey", s:selection, "", "")

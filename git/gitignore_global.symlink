@@ -8,6 +8,7 @@
 .pglog
 .sass-cache
 .tags*
+.vimrc
 bower_components
 dump.rdb
 node_modules
