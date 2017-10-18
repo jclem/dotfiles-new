@@ -1,0 +1,4 @@
+# http://jonas.nitro.dk/tig/tigrc.5.html
+
+set line-graphics = utf-8
+set mouse = true
