@@ -8,6 +8,26 @@ snippet logj "console.log (JSON)"
 console.log(JSON.stringify(${0:${VISUAL}}, null, 4));
 endsnippet
 
+# Testing
+
+snippet bef "beforeEach ..."
+beforeEach(() => {
+	$0
+});
+endsnippet
+
+snippet desc "describe ..."
+describe('$1', () => {
+	$0
+});
+endsnippet
+
+snippet it "it ..."
+it('$1', () => {
+	$0
+});
+endsnippet
+
 # Variables
 
 snippet const "const ... = ..."
