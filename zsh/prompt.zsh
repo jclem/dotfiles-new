@@ -4,7 +4,7 @@ PROMPT='%F{yellow}⋑ \
 %F{blue}%c\
 $(hostname)\
 ${vcs_info_msg_0_}\
-%F{blue}☛ %f '
+%F{blue} ☛ %f '
 
 autoload -Uz vcs_info
 
