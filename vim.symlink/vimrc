@@ -1,8 +1,18 @@
 set nocompatible
 
 call plug#begin()
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+Plug '/usr/local/opt/fzf'
+Plug 'fatih/vim-go'
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'Quramy/tsuquyomi'
 Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-fugitive'
+Plug 'sjl/gundo.vim'
+
 call plug#end()
 
 " Editing
@@ -10,20 +20,25 @@ set backspace=indent,eol,start
 set hidden
 set ruler
 
+" Status line
+set statusline=%f\ %y\ %h%m%r%w%=%l/%L
+
 " Visual styling
 colorscheme tomorrow-night
-set guioptions=
 set colorcolumn=80
-set nocursorline
+set guifont=SF\ Mono:h13
+set guioptions=
 set laststatus=2
-set showcmd
-set showmode
-set wildmenu
-set ttyfast
 set lazyredraw
+set linespace=1
+set list
+set nocursorline
 set number
 set numberwidth=4
-set list
+set showcmd
+set showmode
+set ttyfast
+set wildmenu
 let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 " Netrw
@@ -85,14 +100,51 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 
+" Gundo
+let g:gundo_prefer_python3=1
+let g:gundo_width=40
+let g:gundo_right=1
+
+" vim-javascript
+let g:javascript_plugin_jsdoc=1
+
+" NERDCommenter
+let g:NERDCommentEmptyLines=1
+let g:NERDSpaceDelims=1
+let g:NERDTrimTrailingWhitespace=1
+let g:NERDDefaultAlign='left'
+
+" NERDTree
+let g:NERDTreeNaturalSort=1
+
 " Mappings
 let mapleader = ','
 nnoremap ; :
 vnoremap ; :
 map Q gq
 nnoremap <silent> \ :NERDTreeToggle<cr>
-nnoremap <silent> <leader>rv :source $MYVIMRC<cr>
+nnoremap <silent> <leader>vv :source $MYVIMRC<cr>
+nnoremap <silent> <leader>vp :source $MYVIMRC<cr> <bar> :PlugInstall<cr>
 nnoremap <leader>S :%s/
 vnoremap <leader>S :s/
 inoremap kj <esc>
 nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
+nnoremap <silent> <leader>u :GundoToggle<cr>
+
+" Window navigation
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" Fuzzy finding
+nnoremap <leader>fd :FZF<cr>
+nnoremap <leader>fa :Ag<cr>
+nnoremap <leader>fb :Buffers<cr>
+nnoremap <leader>fl :BLines<cr>
+nnoremap <leader>fh :History<cr>
+nnoremap <leader>f? :Helptags<cr>
+nnoremap <leader>fc :Commands<cr>
+nnoremap <leader>fm :Marks<cr>
+nnoremap <leader>fs :Snippets<cr>
+nnoremap <leader>fg :GFiles?<cr>
