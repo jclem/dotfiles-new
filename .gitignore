@@ -1,7 +1,10 @@
-*.swp
 *.vimbackup
 vim.symlink/files/.netrwhist
 vim.symlink/files/info/viminfo
+vim.symlink/files/backup/
+!vim.symlink/files/backup/.keep
+vim.symlink/files/swap/
+!vim.symlink/files/swap/.keep
 vim.symlink/files/undo/
 !vim.symlink/files/undo/.keep
 vim.symlink/plugged/
