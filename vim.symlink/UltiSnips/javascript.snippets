@@ -1,11 +1,11 @@
 # Logging
 
 snippet log "console.log"
-console.log($0);
+console.log(${0:${VISUAL}});
 endsnippet
 
 snippet logj "console.log (JSON)"
-console.log(JSON.stringify($0, null, 4));
+console.log(JSON.stringify(${0:${VISUAL}}, null, 4));
 endsnippet
 
 # Variables
@@ -56,6 +56,16 @@ endsnippet
 
 snippet meth "method definition"
 $1($2) {
+	$0
+}
+endsnippet
+
+# Miscellaneous
+
+snippet try "try..catch"
+try {
+	$1
+} catch (err) {
 	$0
 }
 endsnippet
