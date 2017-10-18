@@ -78,7 +78,7 @@ fi
 echo "\n$fg[green]Installing Homebrew recipes$reset_color"
 
 homebrew_install() {
-  if [[ "$(brew --prefix $1 2>/dev/null)" == "" ]]; then
+  if [[ "$(brew ls --versions $1)" == "" ]]; then
     echo "$fg[green]  ☆  Installing $1.$reset_color"
     brew install $@
   else
