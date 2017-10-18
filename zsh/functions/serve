@@ -1,0 +1,15 @@
+ruby -e "$(cat <<EOF
+  require 'logger'
+  require 'webrick'
+
+  server = WEBrick::HTTPServer.new(DocumentRoot: ".", Port: 0)
+
+  trap 'INT' do
+    server.shutdown
+  end
+
+  server.logger.info("Listening at http://127.0.0.1:#{server[:Port]}")
+
+  server.start
+EOF
+)"
