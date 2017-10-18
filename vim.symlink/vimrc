@@ -75,7 +75,8 @@ set display=truncate
 set scrolloff=5
 set sidescrolloff=5
 set mouse=a
-set nowrap
+set wrap
+set showbreak=...→\ 
 set splitbelow
 set splitright
 set listchars+=trail:·
