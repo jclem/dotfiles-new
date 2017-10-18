@@ -169,6 +169,8 @@ nnoremap <silent> <leader>gtr :TsuReferences<cr>
 nnoremap <silent> <leader>gts :TsuSignatureHelp<cr>
 nnoremap <silent> <leader>vs :Gstatus<cr>
 nmap <silent> <leader>d <Plug>DashSearch
+nnoremap <leader>rc :VimuxRunCommand 
+nnoremap <silent> <leader>rr :VimuxRunLastCommand<cr>
 
 " Vim doesn't do normal escape with Ctrl+C
 inoremap <c-c> <esc>
