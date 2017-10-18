@@ -34,6 +34,20 @@ Plug 'tpope/vim-surround'
 
 call plug#end()
 
+" Functions
+function! NumberToggle()
+  if &number
+    set nonumber
+  else
+    set number
+  endif
+endfunction
+
+function! HighlightOverLength()
+  highlight! OverLength ctermbg=darkred
+  match OverLength /\%>80v.\+/
+endfunction
+
 " Editing
 set backspace=indent,eol,start
 set hidden
@@ -45,7 +59,6 @@ set statusline=%f\ %y\ %h%m%r%w%=%l/%L
 " Visual styling
 colorscheme tomorrow-night
 set background=dark
-set colorcolumn=80
 set guifont=SF\ Mono:h13
 set guioptions=
 set laststatus=2
@@ -63,7 +76,7 @@ set fillchars=vert:│
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
 autocmd ColorScheme * highlight! VertSplit ctermbg=NONE
-autocmd ColorScheme * highlight! Comment cterm=italic
+autocmd ColorScheme * call HighlightOverLength()
 let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 " Netrw
@@ -177,14 +190,6 @@ noremap <silent> <leader>rc :VimuxInterruptRunner<cr>
 noremap <silent> <leader>rx :VimuxCloseRunner<cr>
 noremap <silent> <leader>rz :VimuxZoomRunner<cr>
 nnoremap <silent> <leader>n :call NumberToggle()<cr>
-
-function! NumberToggle()
-  if &number
-    set nonumber
-  else
-    set number
-  endif
-endfunction
 
 " Vim doesn't do normal escape with Ctrl+C
 inoremap <c-c> <esc>
