@@ -4,6 +4,7 @@ export CODE=$HOME/Development
 export ZSH_CONFIG_DIR=$CODE/dotfiles/zsh
 export TERM=xterm-256color
 export PATH=$HOME/.bin:$PATH
+export FZF_DEFAULT_COMMAND='ag -g ""'
 
 if ! [[ "$(which brew)" =~ "not found$" ]]; then
   export PATH=$(brew --prefix)/bin:$PATH
