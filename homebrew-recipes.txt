@@ -27,6 +27,7 @@
   reattach-to-user-namespace
   redis
   ruby
+  stack
   the_silver_searcher
   tig
   tmux
