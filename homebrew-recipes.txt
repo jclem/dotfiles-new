@@ -10,7 +10,7 @@
   hub
   imagemagick
   jq
-  macvim --with-luajit --with-python3
+  macvim --with-luajit --with-python3 --with-override-system-vim
   node
   postgresql --with-python3
   pstree
