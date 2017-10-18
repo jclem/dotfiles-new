@@ -5,6 +5,7 @@
   elixir
   erlang
   ffmpeg
+  fswatch
   fzf
   git
   htop
