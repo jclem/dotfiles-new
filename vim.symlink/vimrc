@@ -123,9 +123,8 @@ syntax enable
 filetype plugin indent on
 
 " Cursor style
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_SI="\033[5 q"
+let &t_EI="\033[1 q"
 
 " Gundo
 let g:gundo_prefer_python3=1
