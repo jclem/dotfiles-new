@@ -28,4 +28,5 @@
   wget
   wxmac
   yarn
+  z
   zsh
