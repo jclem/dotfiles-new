@@ -124,6 +124,9 @@ let g:NERDDefaultAlign='left'
 " NERDTree
 let g:NERDTreeNaturalSort=1
 
+" tsuquyomi
+let g:tsuquyomi_definition_split=1
+
 " Mappings
 let mapleader = ','
 nnoremap ; :
@@ -137,6 +140,9 @@ vnoremap <leader>S :s/
 inoremap kj <esc>
 nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>u :GundoToggle<cr>
+nnoremap <silent> <leader>gtd :TsuDefinition<cr>
+nnoremap <silent> <leader>gtr :TsuReferences<cr>
+nnoremap <silent> <leader>vs :Gstatus<cr>
 
 " Vim doesn't do normal escape with Ctrl+C
 inoremap <c-c> <esc>
@@ -171,8 +177,3 @@ nnoremap <leader>fm :Marks<cr>
 nnoremap <leader>fs :Snippets<cr>
 nnoremap <leader>fg :GFiles?<cr>
 nnoremap <leader>fw :Windows<cr>
-
-" tsuquyomi
-let g:tsuquyomi_definition_split=1
-nnoremap <leader>gtd :TsuDefinition<cr>
-nnoremap <leader>gtr :TsuReferences<cr>
