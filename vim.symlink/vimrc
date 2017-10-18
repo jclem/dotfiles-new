@@ -21,8 +21,8 @@ Plug 'Quramy/tsuquyomi'
 Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Shougo/unite.vim'
 Plug 'Shougo/unite-outline'
+Plug 'Shougo/unite.vim'
 Plug 'SirVer/ultisnips'
 Plug 'sjl/gundo.vim'
 Plug 'slashmili/alchemist.vim'
@@ -30,6 +30,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 
 call plug#end()
