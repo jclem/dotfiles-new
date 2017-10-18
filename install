@@ -1,0 +1,64 @@
+#!/usr/bin/env zsh
+
+autoload colors && colors
+
+# Create a new symbolic link, but remove it first if it already exists.
+create_link () {
+  if [ -e $2 ] || [ -L $2 ]; then
+    rm $2
+  fi
+
+  ln -s $1 $2
+
+  echo "$fg[green]  ☆  $2 linked.$reset_color"
+}
+
+# Prompt the user to take action if a symbolic link already exists.
+# Y: Remove the link and replace it
+# n: Skip this file
+# A: Remove and re-link all following symbolic links
+# q: Quit and exit with exit code 1
+link_exists_prompt () {
+  echo "$fg[yellow]  ☆  $2 already exists. Overwrite? [(Y)es (n)o (A)ll (q)uit]$reset_color"
+
+  read -ks action
+
+  case $action in
+    Y)
+      create_link $1 $2
+      ;;
+    A)
+      link_all=0
+      create_link $1 $2
+      ;;
+    q)
+      echo "$fg[red]Goodbye.$reset_color"
+      exit 1
+      ;;
+    *)
+      echo "$fg[red]  ☆  Not linking.$reset_color"
+  esac
+}
+
+echo "\n$fg[green]Installing symlinks.$reset_color"
+
+for symlink (./**/*.symlink) {
+  if [[ "$symlink" =~ "vim.symlink/files/undo" ]]; then
+    continue
+  fi
+
+  link_to_path="$(pwd)$(echo $symlink | sed 's/\.//')"
+  link_from_path="$HOME/.$(basename $symlink | awk -F. '{ $NF=""; print }' | sed 's/\ \([^$]\)/\.\1/' | sed 's/\ $//')"
+
+  if [ $link_all ]; then
+    create_link $link_to_path $link_from_path
+  else
+    if [ -e $link_from_path ] || [ -L $link_from_path ]; then
+      link_exists_prompt $link_to_path $link_from_path
+    else
+      create_link $link_to_path $link_from_path
+    fi
+  fi
+}
+
+exit 0

@@ -1,0 +1,30 @@
+[alias]
+	ad = add --patch
+	br = browse
+	cm = commit
+	co = checkout
+	df = diff
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit --
+	pl = pull --rebase
+	pr = pull-request
+	ps = push
+	st = status
+[color]
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore_global
+	whitespace = trailing-space,space-before-tab
+[diff]
+	mnemonicprefix = true
+	renames = copies
+[github]
+	user = jclem
+[merge]
+	stat = true
+[push]
+	default = tracking
+[rerere]
+	enabled = true
+[user]
+	name = Jonathan Clem
+	email = jonathan@jclem.net

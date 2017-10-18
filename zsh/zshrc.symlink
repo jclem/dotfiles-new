@@ -1,0 +1,40 @@
+export EDITOR="vim"
+export CODE=$HOME/Development
+
+export ZSH_CONFIG=$CODE/dotfiles/zsh
+export TERM=xterm-256color
+export PATH=$HOME/.bin:$PATH
+
+if ! [[ "$(which brew)" =~ "not found$" ]]; then
+  export PATH=$(brew --prefix)/bin:$PATH
+fi
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory autocd beep extendedglob nomatch
+unsetopt notify
+bindkey -v
+
+# Load colors
+autoload colors && colors
+
+# Set up completion.
+zmodload zsh/complist # For menuselect
+autoload -Uz compinit
+
+# Load other Zsh config files.
+for conf_file ($ZSH_CONFIG/**/*.zsh); do
+  source $conf_file
+done
+
+# zmv for renaming files
+autoload -Uz zmv
+
+# Load local Zsh config.
+if [ -f $HOME/.zshrc_local ]; then
+  source $HOME/.zshrc_local
+fi
+
+# Finally initialize completion.
+compinit

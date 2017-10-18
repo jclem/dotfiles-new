@@ -1,0 +1,15 @@
+*.swp
+.DS_Store
+.env
+.mix_commands
+.netrwhist
+.pgdata
+.pglog
+.sass-cache
+.tags*
+bower_components
+dump.rdb
+node_modules
+npm-debug.log
+tags
+tmp
