@@ -1,0 +1,10 @@
+_build/
+bower_components/
+deps/
+dist/
+log/
+lsd/
+node_modules/
+tags
+third_party/
+tmp/
