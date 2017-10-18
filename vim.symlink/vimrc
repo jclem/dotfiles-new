@@ -10,8 +10,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'Quramy/tsuquyomi'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -137,6 +137,18 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
+" Splits
+nnoremap <silent> <leader>\| :vsplit<cr>
+nnoremap <silent> <leader>- :split<cr>
+
+" Tabbing
+nnoremap <silent> <leader>tt :tabnew<cr>
+nnoremap <silent> <leader>tn :tabnext<cr>
+nnoremap <silent> <leader>tp :tabprev<cr>
+nnoremap <silent> <leader>tc :tabclose<cr>
+nnoremap <silent> } :tabnext<cr>
+nnoremap <silent> { :tabprev<cr>
+
 " Fuzzy finding
 nnoremap <leader>fd :FZF<cr>
 nnoremap <leader>fa :Ag<cr>
@@ -148,3 +160,9 @@ nnoremap <leader>fc :Commands<cr>
 nnoremap <leader>fm :Marks<cr>
 nnoremap <leader>fs :Snippets<cr>
 nnoremap <leader>fg :GFiles?<cr>
+nnoremap <leader>fw :Windows<cr>
+
+" tsuquyomi
+let g:tsuquyomi_definition_split=1
+nnoremap <leader>gtd :TsuDefinition<cr>
+nnoremap <leader>gtr :TsuReferences<cr>
