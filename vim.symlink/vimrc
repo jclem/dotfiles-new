@@ -5,6 +5,7 @@ call plug#begin()
 Plug '$HOME/.fzf'
 Plug '/usr/local/opt/fzf'
 Plug 'altercation/vim-colors-solarized'
+Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
