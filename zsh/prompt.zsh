@@ -1,8 +1,8 @@
 setopt PROMPT_SUBST
 
-
 PROMPT='%F{yellow}⋑ \
 %F{blue}%c\
+$(hostname)\
 ${vcs_info_msg_0_}\
 %F{blue} ☛ %f '
 
@@ -31,3 +31,10 @@ function +vi-git-untracked(){
         hook_com[unstaged]+='%F{red}?%f%b'
     fi
 }
+
+function hostname() {
+  if [ -n "$SSH_CONNECTION" ]; then
+    echo ' %F{yellow}[%n@%m]'
+  fi
+}
+
