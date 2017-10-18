@@ -1,0 +1,3 @@
+rm -rf ~/.vim/files/backup/*.vimbackup
+rm -rf ~/.vim/files/swap/*.swp
+rm -rf ~/.vim/files/undo/*
