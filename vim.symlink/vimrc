@@ -21,6 +21,8 @@ Plug 'Quramy/tsuquyomi'
 Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Shougo/unite.vim'
+Plug 'Shougo/unite-outline'
 Plug 'SirVer/ultisnips'
 Plug 'sjl/gundo.vim'
 Plug 'slashmili/alchemist.vim'
@@ -163,10 +165,6 @@ vnoremap <leader>S :s/
 inoremap kj <esc>
 nnoremap <silent> <c-c> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>u :GundoToggle<cr>
-nnoremap <silent> <leader>gtd :TsuDefinition<cr>
-nnoremap <silent> <leader>gi :<C-u>echo tsuquyomi#hint()<cr>
-nnoremap <silent> <leader>gtr :TsuReferences<cr>
-nnoremap <silent> <leader>gts :TsuSignatureHelp<cr>
 nnoremap <silent> <leader>vs :Gstatus<cr>
 nmap <silent> <leader>d <Plug>DashSearch
 nnoremap <leader>rc :VimuxRunCommand 
