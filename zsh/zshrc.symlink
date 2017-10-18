@@ -43,7 +43,9 @@ if [ -f $HOME/.zshrc_local ]; then
   source $HOME/.zshrc_local
 fi
 
-. $HOME/.z.sh
+[ -f $HOME/.z.sh ] && . $HOME/.z.sh
+[ -f $HOME/fzf.zsh ] && . $HOME/fzf.zsh
+
 
 # Finally initialize completion.
 compinit
