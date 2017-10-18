@@ -63,6 +63,8 @@ let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 " Searching
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
 set wrapscan
 
 " Indentation
