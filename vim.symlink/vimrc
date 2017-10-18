@@ -38,6 +38,7 @@ set statusline=%f\ %y\ %h%m%r%w%=%l/%L
 
 " Visual styling
 colorscheme solarized
+set background=dark
 set colorcolumn=80
 set guifont=SF\ Mono:h13
 set guioptions=
