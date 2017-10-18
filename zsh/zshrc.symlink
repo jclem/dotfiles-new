@@ -1,7 +1,7 @@
 export EDITOR="vim"
 export CODE=$HOME/Development
 
-export ZSH_CONFIG=$CODE/dotfiles/zsh
+export ZSH_CONFIG_DIR=$CODE/dotfiles/zsh
 export TERM=xterm-256color
 export PATH=$HOME/.bin:$PATH
 
@@ -24,7 +24,7 @@ zmodload zsh/complist # For menuselect
 autoload -Uz compinit
 
 # Load other Zsh config files.
-for conf_file ($ZSH_CONFIG/**/*.zsh); do
+for conf_file ($ZSH_CONFIG_DIR/**/*.zsh); do
   source $conf_file
 done
 

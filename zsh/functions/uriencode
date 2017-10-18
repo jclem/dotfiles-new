@@ -1,0 +1,1 @@
+ruby -rgci -e "puts CGI.escape(ARGV[0])" $1
