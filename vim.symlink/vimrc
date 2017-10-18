@@ -164,6 +164,7 @@ inoremap kj <esc>
 nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>u :GundoToggle<cr>
 nnoremap <silent> <leader>gtd :TsuDefinition<cr>
+nnoremap <silent> <leader>gi :<C-u>echo tsuquyomi#hint()<cr>
 nnoremap <silent> <leader>gtr :TsuReferences<cr>
 nnoremap <silent> <leader>gts :TsuSignatureHelp<cr>
 nnoremap <silent> <leader>vs :Gstatus<cr>
