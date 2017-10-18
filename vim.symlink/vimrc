@@ -2,6 +2,7 @@ set nocompatible
 
 call plug#begin()
 
+Plug '$HOME/.fzf'
 Plug '/usr/local/opt/fzf'
 Plug 'altercation/vim-colors-solarized'
 Plug 'christoomey/vim-tmux-navigator'
