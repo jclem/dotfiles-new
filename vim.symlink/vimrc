@@ -3,6 +3,7 @@ set nocompatible
 call plug#begin()
 
 Plug '/usr/local/opt/fzf'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'jclem/ale'
