@@ -25,8 +25,8 @@ Plug 'SirVer/ultisnips'
 Plug 'sjl/gundo.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
@@ -57,7 +57,8 @@ set showcmd
 set showmode
 set ttyfast
 set wildmenu
-set fillchars=vert:\ 
+set fillchars=vert:│
+autocmd ColorScheme * highlight! VertSplit ctermbg=NONE
 let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 " Netrw
