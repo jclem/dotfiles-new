@@ -18,3 +18,4 @@ alias gst="git status"
 # Miscellaneous
 alias bs="brew services"
 alias reload="source ~/.zshrc"
+alias vmrun="/Applications/VMware\ Fusion.app/Contents/library/vmrun"
