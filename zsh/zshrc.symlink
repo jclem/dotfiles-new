@@ -12,6 +12,7 @@ export PATH=$HOME/.bin:/usr/local/Cellar/node/8.1.4/bin:$PATH
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export GOPATH=$CODE/go
 export PATH=$PATH:$GOPATH/bin
+export ERL_AFLAGS="-kernel shell_history enabled"
 
 if ! [[ "$(which brew)" =~ "not found$" ]]; then
   export PATH=$(brew --prefix)/bin:$PATH
