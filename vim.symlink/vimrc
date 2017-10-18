@@ -86,6 +86,7 @@ set listchars+=trail:·
 set report=0
 set autoread
 set synmaxcol=200
+set dictionary+=/usr/share/dict/words
 
 " File settings
 set backup
