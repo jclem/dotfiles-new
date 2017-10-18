@@ -60,7 +60,10 @@ set showmode
 set ttyfast
 set wildmenu
 set fillchars=vert:│
+let &t_ZH="\e[3m"
+let &t_ZR="\e[23m"
 autocmd ColorScheme * highlight! VertSplit ctermbg=NONE
+autocmd ColorScheme * highlight! Comment cterm=italic
 let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 " Netrw
