@@ -1,7 +1,7 @@
   aws-shell
   cscope
-  erlang
   elixir
+  erlang
   ffmpeg
   fzf
   git
@@ -16,6 +16,7 @@
   pstree
   python
   python3
+  reattach-to-user-namespace
   redis
   ruby
   the_silver_searcher
