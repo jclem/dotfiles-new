@@ -53,6 +53,7 @@ set showcmd
 set showmode
 set ttyfast
 set wildmenu
+set fillchars=vert:\ 
 let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
 
 " Netrw
