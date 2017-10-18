@@ -44,7 +44,7 @@ if [ -f $HOME/.zshrc_local ]; then
 fi
 
 [ -f $HOME/.z.sh ] && . $HOME/.z.sh
-[ -f $HOME/fzf.zsh ] && . $HOME/fzf.zsh
+[ -f $HOME/.fzf.zsh ] && . $HOME/.fzf.zsh
 
 
 # Finally initialize completion.
