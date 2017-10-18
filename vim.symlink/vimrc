@@ -151,7 +151,7 @@ let g:tsuquyomi_disable_quickfix=1
 let g:dash_activate=0
 
 " Mappings
-let mapleader = ','
+let mapleader = ' '
 nnoremap ; :
 vnoremap ; :
 map Q gq
@@ -161,7 +161,7 @@ nnoremap <silent> <leader>vp :source $MYVIMRC<cr> <bar> :PlugInstall<cr>
 nnoremap <leader>S :%s/
 vnoremap <leader>S :s/
 inoremap kj <esc>
-nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
+nnoremap <silent> <c-c> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>u :GundoToggle<cr>
 nnoremap <silent> <leader>gtd :TsuDefinition<cr>
 nnoremap <silent> <leader>gi :<C-u>echo tsuquyomi#hint()<cr>
