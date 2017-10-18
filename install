@@ -130,7 +130,14 @@ echo "\n$fg[green]Installing Vim plugins$reset_color"
 vim +PlugInstall +qa
 
 echo "\n$fg[green]Installing Tmux plugin manager$reset_color"
-mkdir -p ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+if ! [ -d ~/.tmux/plugins ]; then
+  mkdir -p ~/.tmux/plugins
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+echo "\n$fg[green]Installing terminfos$reset_color"
+for terminfo_file (./terminfos/*.terminfo); do
+  tic $terminfo_file
+done
 
 exit 0
