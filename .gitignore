@@ -8,3 +8,4 @@ vim.symlink/files/swap/
 vim.symlink/files/undo/
 !vim.symlink/files/undo/.keep
 vim.symlink/plugged/
+vim.symlink/local/

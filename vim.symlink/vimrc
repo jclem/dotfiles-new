@@ -225,5 +225,7 @@ nnoremap <leader>fs :Snippets<cr>
 nnoremap <leader>fg :GFiles?<cr>
 nnoremap <leader>fw :Windows<cr>
 
+runtime! local/**/*.vim
+
 set exrc
 set secure
