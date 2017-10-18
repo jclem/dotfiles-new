@@ -12,6 +12,7 @@ set ruler
 
 " Visual styling
 colorscheme tomorrow-night
+set guioptions=
 set colorcolumn=80
 set nocursorline
 set laststatus=2
