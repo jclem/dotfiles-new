@@ -123,6 +123,7 @@ while read recipe; do
 done < ./homebrew-recipes.txt
 
 echo "\n$fg[green]Installing z.sh$reset_color"
+mkdir -p /usr/local/etc/profile.d
 wget -O /usr/local/etc/profile.d/z.sh \
   https://raw.githubusercontent.com/rupa/z/master/z.sh
 
