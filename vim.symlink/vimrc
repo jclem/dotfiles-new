@@ -143,6 +143,7 @@ nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>u :GundoToggle<cr>
 nnoremap <silent> <leader>gtd :TsuDefinition<cr>
 nnoremap <silent> <leader>gtr :TsuReferences<cr>
+nnoremap <silent> <leader>gts :TsuSignatureHelp<cr>
 nnoremap <silent> <leader>vs :Gstatus<cr>
 
 " Vim doesn't do normal escape with Ctrl+C
