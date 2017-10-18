@@ -23,3 +23,21 @@ snippet tdoc "Type documentation"
 $0
 """
 endsnippet
+
+# Function definition
+
+snippet spec "Function spec"
+@spec $1($2) :: $0
+endsnippet
+
+snippet def "Define function"
+def $1($2) do
+	$0
+end
+endsnippet
+
+snippet defp "Define function (private)"
+defp $1($2) do
+	$0
+end
+endsnippet
