@@ -1,5 +1,6 @@
   aws-shell
   cscope
+  ctags
   elixir
   erlang
   ffmpeg
