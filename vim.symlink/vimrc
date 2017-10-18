@@ -49,7 +49,6 @@ set linespace=1
 set list
 set nocursorline
 set number
-set relativenumber
 set numberwidth=4
 set showcmd
 set showmode
@@ -123,10 +122,6 @@ filetype plugin indent on
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-
-" Numbering style
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber
 
 " Gundo
 let g:gundo_prefer_python3=1
