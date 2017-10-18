@@ -1,0 +1,61 @@
+# Logging
+
+snippet log "console.log"
+console.log($0);
+endsnippet
+
+snippet logj "console.log (JSON)"
+console.log(JSON.stringify($0, null, 4));
+endsnippet
+
+# Variables
+
+snippet const "const ... = ..."
+const $1 = $0;
+endsnippet
+
+snippet let "let ... = ..."
+let $1 = $0;
+endsnippet
+
+snippet var "var ... = ..."
+var $1 = $0;
+endsnippet
+
+# Iteration
+
+snippet fore "forEach"
+forEach($0);
+endsnippet
+
+snippet fori "for (let i = 0...)"
+for (let i = 0; i < $1; i++) {
+	$0
+}
+endsnippet
+
+# Conditionals
+
+snippet if "if (...) { ..."
+if ($1) {
+	$0
+}
+endsnippet
+
+snippet ifl "if (...) ..."
+if ($1) $0
+endsnippet
+
+# Classes
+
+snippet class "class definition"
+class $1 {
+	$0
+}
+endsnippet
+
+snippet meth "method definition"
+$1($2) {
+	$0
+}
+endsnippet
