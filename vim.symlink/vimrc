@@ -16,6 +16,7 @@ Plug 'sjl/gundo.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer --clang-completer --racer-completer --tern-completer' }
 
 call plug#end()
 
@@ -146,9 +147,9 @@ vnoremap <leader>S :s/
 inoremap kj <esc>
 nnoremap <silent> <space> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>u :GundoToggle<cr>
-nnoremap <silent> <leader>gtd :TsuDefinition<cr>
-nnoremap <silent> <leader>gtr :TsuReferences<cr>
-nnoremap <silent> <leader>gts :TsuSignatureHelp<cr>
+nnoremap <silent> <leader>gtd :YcmCompleter GoToDefinition<cr>
+nnoremap <silent> <leader>gtr :YcmCompleter GoToReferences<cr>
+nnoremap <silent> <leader>gts :YcmCompleter GetDoc<cr>
 nnoremap <silent> <leader>vs :Gstatus<cr>
 
 " Vim doesn't do normal escape with Ctrl+C
