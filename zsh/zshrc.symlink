@@ -9,10 +9,7 @@ if ! [[ "$(which brew)" =~ "not found$" ]]; then
   export PATH=$(brew --prefix)/bin:$PATH
 fi
 
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt appendhistory autocd beep extendedglob nomatch
+setopt autocd beep extendedglob nomatch
 unsetopt notify
 bindkey -v
 
