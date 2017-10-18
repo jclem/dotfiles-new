@@ -1,4 +1,5 @@
   aws-shell
+  crystal-lang
   cscope
   ctags
   elixir
@@ -14,6 +15,7 @@
   macvim --with-luajit --with-python3 --with-override-system-vim
   mosh
   node
+  osxutils
   postgresql --with-python3
   pstree
   python
