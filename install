@@ -69,9 +69,6 @@ for symlink (./**/*.symlink) {
   fi
 }
 
-echo "\n$fg[green]Installing Vim plugins$reset_color"
-vim +PlugInstall +qa
-
 if [[ "$(command -v brew)" == "" ]]; then
   echo "\n$fg[green]Installing Homebrew$reset_color"
   /usr/bin/ruby -e \
