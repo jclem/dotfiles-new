@@ -190,6 +190,10 @@ noremap <silent> <leader>rc :VimuxInterruptRunner<cr>
 noremap <silent> <leader>rx :VimuxCloseRunner<cr>
 noremap <silent> <leader>rz :VimuxZoomRunner<cr>
 nnoremap <silent> <leader>n :call NumberToggle()<cr>
+nnoremap <silent> ]q :cnext<cr>
+nnoremap <silent> [q :cprev<cr>
+nnoremap <silent> ]Q :clast<cr>
+nnoremap <silent> [Q :cfirst<cr>
 
 " Vim doesn't do normal escape with Ctrl+C
 inoremap <c-c> <esc>
