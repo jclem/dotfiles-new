@@ -125,4 +125,7 @@ while read recipe; do
   esac
 done < ./homebrew-recipes.txt
 
+echo "\n$fg[green]Installing Vim plugins$reset_color"
+vim +PlugInstall +qa
+
 exit 0
