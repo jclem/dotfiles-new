@@ -62,4 +62,10 @@ endsnippet
 
 snippet typedoc "Type documentation"
 @typedoc "$0"
+snippet using "__using__ macro"
+defmacro __using__($1) do
+	quote do
+		$0
+	end
+end
 endsnippet
