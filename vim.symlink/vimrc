@@ -16,6 +16,8 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'Quramy/tsuquyomi'
 Plug 'rizzatti/dash.vim'
@@ -144,6 +146,12 @@ let &t_EI="\033[1 q"
 let g:gundo_prefer_python3=1
 let g:gundo_width=40
 let g:gundo_right=1
+
+" Gist
+let g:gist_detect_filetype=1
+let g:gist_open_browser_after_post=1
+let g:gist_show_private=1
+let g:gist_get_multiplefile=1
 
 " vim-javascript
 let g:javascript_plugin_jsdoc=1
