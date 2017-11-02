@@ -36,6 +36,7 @@ bind | split-window -h
 bind - split-window -v
 unbind '"'
 unbind %
+bind R clear-history
 bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
