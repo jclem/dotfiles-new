@@ -41,3 +41,25 @@ defp $1($2) do
 	$0
 end
 endsnippet
+
+# Testing
+
+snippet test "Test"
+test "$1" do
+	$0
+end
+endsnippet
+
+# Miscellaneous
+
+snippet defmod "Define module"
+defmodule $1 do
+	@moduledoc """
+	$0
+	"""
+end
+endsnippet
+
+snippet typedoc "Type documentation"
+@typedoc "$0"
+endsnippet
