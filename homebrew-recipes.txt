@@ -23,6 +23,7 @@
   osxutils
   postgresql --with-python3
   pstree
+  pwgen
   python
   python3
   reattach-to-user-namespace
