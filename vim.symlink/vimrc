@@ -167,7 +167,7 @@ let g:NERDDefaultAlign='left'
 
 " NERDTree
 let g:NERDTreeNaturalSort=1
-let g:NERDTreeIgnore=['build']
+let g:NERDTreeIgnore=['build/']
 
 " tsuquyomi
 let g:tsuquyomi_definition_split=1
