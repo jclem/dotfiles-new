@@ -3,6 +3,7 @@ set nocompatible
 call plug#begin()
 
 Plug '$HOME/.fzf'
+Plug 'cespare/vim-toml'
 Plug '/usr/local/opt/fzf'
 Plug 'altercation/vim-colors-solarized'
 Plug 'benmills/vimux'
