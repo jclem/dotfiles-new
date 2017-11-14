@@ -10,7 +10,6 @@ Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
-" Plug 'jclem/ale'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/gv.vim'
@@ -37,6 +36,7 @@ Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
 
 call plug#end()
 
