@@ -9,3 +9,16 @@ vim.symlink/files/undo/**
 !vim.symlink/files/undo/.keep
 vim.symlink/plugged/
 vim.symlink/local/
+
+*.nvimbackup
+nvim/files/.netrwhist
+nvim/files/info/**
+!nvim/files/info/.keep
+nvim/files/backup/**
+!nvim/files/backup/.keep
+nvim/files/swap/**
+!nvim/files/swap/.keep
+nvim/files/undo/**
+!nvim/files/undo/.keep
+nvim/plugged/
+nvim/local/
