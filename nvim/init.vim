@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug '$HOME/.fzf'
 Plug '/usr/local/opt/fzf'
+Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'junegunn/fzf.vim'
@@ -139,6 +140,14 @@ nnoremap <leader>fl :BLines<cr>
 nnoremap <leader>fm :Marks<cr>
 nnoremap <leader>fs :Snippets<cr>
 nnoremap <leader>fw :Windows<cr>
+
+" Mappings - Vimux
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+nnoremap <silent> <leader>rc :VimuxInterruptRunner<cr>
+nnoremap <silent> <leader>rp :VimuxRunLastCommand<cr>
+nnoremap <silent> <leader>rr :VimuxPromptCommand<cr>
+nnoremap <silent> <leader>rx :VimuxCloseRunner<cr>
+nnoremap <silent> <leader>rz :VimuxZoomRunner<cr>
 
 " Secure Local Vim Configuration
 set exrc
