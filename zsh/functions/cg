@@ -1,0 +1,2 @@
+export CHECK_GIT=1
+source $HOME/.zshrc

@@ -1,0 +1,2 @@
+unset CHECK_GIT
+source $HOME/.zshrc

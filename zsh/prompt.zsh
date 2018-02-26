@@ -12,12 +12,28 @@ precmd() {
   vcs_info
 }
 
-zstyle ':vcs_info:*' check-for-changes true
+if [[ -v CHECK_GIT ]]; then
+  zstyle ':vcs_info:*' check-for-changes true
+else
+  zstyle ':vcs_info:*' check-for-changes false
+fi
+
 zstyle ':vcs_info:*' actionformats ' %F{cyan}{ %F{red}%b%F{cyan} }%f %F{magenta}%m %a'
-zstyle ':vcs_info:*' formats ' %F{cyan}{ %F{red}%b%F{cyan} }%f '
+
+if [[ -v CHECK_GIT ]]; then
+  zstyle ':vcs_info:*' formats ' %F{cyan}{ %F{red}%b%F{cyan} }%f %c%u'
+else
+  zstyle ':vcs_info:*' formats ' %F{cyan}{ %F{red}%b%F{cyan} }%f '
+fi
+
 zstyle ':vcs_info:*' stagedstr '%F{green}S%f%b'
 zstyle ':vcs_info:*' unstagedstr '%F{yellow}U%f%b'
-zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+
+if [[ -v CHECK_GIT ]]; then
+  zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+else
+  zstyle ':vcs_info:git*+set-message:*' hooks
+fi
 
 ### git: Show marker (T) if there are untracked files in repository
 # Make sure you have added staged to your 'formats':  %c
@@ -37,4 +53,3 @@ function hostname() {
     echo ' %F{yellow}[%n@%m]'
   fi
 }
-
