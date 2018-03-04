@@ -17,6 +17,7 @@ alias gst="git status"
 
 # Miscellaneous
 alias bs="brew services"
+alias hr="heroku"
 alias reload="source ~/.zshrc"
 alias vmrun="/Applications/VMware\ Fusion.app/Contents/library/vmrun"
 alias ssh-key-add="ssh-add -K ~/.ssh/id_rsa"
