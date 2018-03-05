@@ -17,6 +17,8 @@ alias gst="git status"
 
 # Miscellaneous
 alias bs="brew services"
+alias fr="foreman run"
+alias fs="foreman start"
 alias hr="heroku"
 alias reload="source ~/.zshrc"
 alias vmrun="/Applications/VMware\ Fusion.app/Contents/library/vmrun"
