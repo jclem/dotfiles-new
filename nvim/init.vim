@@ -77,18 +77,9 @@ filetype plugin indent on
 " Deoplete
 let deoplete#enable_at_startup=1
 
-" Language navigation
-nnoremap <silent> <leader>gd :TSDef<cr>
-nnoremap <silent> <leader>gi :TSDoc<cr>
-nnoremap <silent> <leader>gp :TSDefPreview<cr>
-nnoremap <silent> <leader>gr :TSRefs<cr>
-nnoremap <silent> <leader>gR :TSRename<cr>
-nnoremap <silent> <leader>gt :TSType<cr>
-
 " nvim-typescript
 let nvim_typescript#signature_complete=1
 let nvim_typescript#type_info_on_hold=1
-
 
 " NERDCommenter
 let NERDCommentEmptyLines=1
@@ -111,6 +102,14 @@ inoremap kj <esc>
 nnoremap <silent> <c-c> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>% :let @+ = join([expand("%"), line(".")], ":")<cr>
 nnoremap <silent> \ :NERDTreeToggle<cr>
+
+" Language navigation
+nnoremap <silent> <leader>gd :TSDef<cr>
+nnoremap <silent> <leader>gi :TSDoc<cr>
+nnoremap <silent> <leader>gp :TSDefPreview<cr>
+nnoremap <silent> <leader>gr :TSRefs<cr>
+nnoremap <silent> <leader>gR :TSRename<cr>
+nnoremap <silent> <leader>gt :TSType<cr>
 
 " Mappings - Window Navigation
 nnoremap <c-h> <c-w>h
