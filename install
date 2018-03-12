@@ -133,6 +133,16 @@ wget -O $HOME/.z.sh \
 echo "\n$fg[green]Installing Vim plugins$reset_color"
 vim +PlugInstall +qa
 
+echo "\n$fg[green]Installing Neovim Python support$reset_color"
+pip3 install --upgrade neovim
+
+echo "\n$fg[green]Installing Neoim plugins$reset_color"
+nvim +PlugInstall +qa
+
+echo "\n$fg[green]Updateing Neoim remote plugins$reset_color"
+nvim +UpdateRemotePlugins +qa
+
+
 echo "\n$fg[green]Installing Tmux plugin manager$reset_color"
 if ! [ -d ~/.tmux/plugins ]; then
   mkdir -p ~/.tmux/plugins
