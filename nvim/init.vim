@@ -148,6 +148,10 @@ nnoremap <silent> <leader>rr :VimuxPromptCommand<cr>
 nnoremap <silent> <leader>rx :VimuxCloseRunner<cr>
 nnoremap <silent> <leader>rz :VimuxZoomRunner<cr>
 
+if filereadable(expand("~/.nvim-local.vim"))
+  source ~/.nvim-local.vim
+endif
+
 " Secure Local Vim Configuration
 set exrc
 set secure
