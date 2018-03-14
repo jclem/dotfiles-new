@@ -22,7 +22,7 @@ set statusline=%f\ %y\ %h%m%r%w%=%c@%l/%L
 " Visual styling
 colorscheme Tomorrow-Night
 set background=dark
-set colorcolumn=80
+set colorcolumn=100
 set lazyredraw
 set list
 let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±,trail:·'
