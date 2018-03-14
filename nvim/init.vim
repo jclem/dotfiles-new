@@ -65,7 +65,7 @@ set backupdir=$HOME/.config/nvim/files/backup
 set backupext=.nvimbackup
 set backupskip=
 set directory=$HOME/.config/nvim/files/swap//
-set shada=!,'100,%,h,n$HOME/.config/nvim/files/info/shada
+set shada=!,'1000,%,h,n$HOME/.config/nvim/files/info/shada
 set undodir=$HOME/.config/nvim/files/undo
 set undofile
 set updatecount=100
