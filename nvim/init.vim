@@ -2,14 +2,15 @@ call plug#begin()
 
 Plug '$HOME/.fzf'
 Plug '/usr/local/opt/fzf'
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'junegunn/fzf.vim'
+Plug 'lambdalisue/gina.vim'
 Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'w0rp/ale'
