@@ -122,9 +122,11 @@ while read recipe; do
   esac
 done < ./homebrew-recipes.txt
 
-echo "\n$fg[green]Install nvim config$reset_color"
-mkdir -p $HOME/.config
-ln -s "$(pwd)/nvim" "$HOME/.config/nvim"
+if ! [ -L $HOME/.config/nvim ]; then
+  echo "\n$fg[green]Install nvim config$reset_color"
+  mkdir -p $HOME/.config
+  ln -s "$(pwd)/nvim" "$HOME/.config/nvim"
+fi
 
 echo "\n$fg[green]Installing z.sh$reset_color"
 wget -O $HOME/.z.sh \
