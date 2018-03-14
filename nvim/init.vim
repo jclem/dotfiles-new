@@ -54,7 +54,6 @@ set ttimeoutlen=100
 
 " Wrapping/Line Breaks
 set linebreak
-set breakat=80
 set breakindent
 set showbreak=...→\ 
 
