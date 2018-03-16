@@ -100,6 +100,9 @@ let deoplete#enable_at_startup=1
 let nvim_typescript#signature_complete=1
 let nvim_typescript#type_info_on_hold=1
 
+" ALE
+let g:ale_sign_error='☛'
+
 " NERDCommenter
 let NERDCommentEmptyLines=1
 let NERDSpaceDelims=1
