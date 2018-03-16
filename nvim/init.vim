@@ -151,10 +151,11 @@ nnoremap <silent> <leader>gR :TSRename<cr>
 nnoremap <silent> <leader>gt :TSType<cr>
 
 " Mappings - Window Navigation
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-l> <c-w>l
+" ^ Handled by vim-tmux-navigation
 
 " Mappings - Splits
 nnoremap <silent> <leader>\| :vsplit<cr>
