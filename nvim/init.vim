@@ -3,16 +3,29 @@ call plug#begin()
 Plug '$HOME/.fzf'
 Plug '/usr/local/opt/fzf'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'Shougo/denite.nvim'
 Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
+Plug 'cespare/vim-toml'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'elixir-lang/vim-elixir'
+Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/gina.vim'
+Plug 'mattn/emmet-vim'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
 Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
+Plug 'pangloss/vim-javascript'
+Plug 'rhysd/vim-crystal'
+Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'simnalamburt/vim-mundo'
+Plug 'slashmili/alchemist.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
@@ -100,13 +113,17 @@ nnoremap ; :
 vnoremap ; :
 nnoremap <silent> <leader>vv :source $MYVIMRC<cr>
 nnoremap <silent> <leader>vp :source $MYVIMRC<cr> <bar> :PlugInstall<cr>
-nnoremap S :%s/
-vnoremap S :s/
+nnoremap <leader>S :%s/
+vnoremap <leader>S :s/
 inoremap kj <esc>
 nnoremap <silent> <c-c> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>% :let @+ = join([expand("%"), line(".")], ":")<cr>
 nnoremap <silent> \ :NERDTreeToggle<cr>
 nnoremap <silent> <leader>z :Goyo<cr>
+nnoremap <silent> <leader>u :MundoToggle<cr>
+nnoremap <silent> <leader>vss :Gina status<cr>
+nnoremap <silent> <leader>% :let @+ = join([expand('%'), line('.')], ':')<cr>
+nmap <silent> <leader>d <Plug>DashSearch
 
 " Language navigation
 nnoremap <silent> <leader>gd :TSDef<cr>
