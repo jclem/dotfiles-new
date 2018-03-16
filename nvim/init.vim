@@ -11,6 +11,7 @@ Plug 'lambdalisue/gina.vim'
 Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-surround'
@@ -148,6 +149,15 @@ nnoremap <silent> <leader>rp :VimuxRunLastCommand<cr>
 nnoremap <silent> <leader>rr :VimuxPromptCommand<cr>
 nnoremap <silent> <leader>rx :VimuxCloseRunner<cr>
 nnoremap <silent> <leader>rz :VimuxZoomRunner<cr>
+
+" Disable deoplete with multiple cursors
+function! Multiple_cursors_before()
+  let b:deoplete_disable_auto_complete = 1
+endfunction
+
+function! Multiple_cursors_after()
+  let b:deoplete_disable_auto_complete = 0
+endfunction
 
 if filereadable(expand("~/.nvim-local.vim"))
   source ~/.nvim-local.vim
