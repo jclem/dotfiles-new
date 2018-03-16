@@ -7,6 +7,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'lambdalisue/gina.vim'
 Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
 Plug 'scrooloose/nerdcommenter'
@@ -104,6 +106,7 @@ inoremap kj <esc>
 nnoremap <silent> <c-c> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>% :let @+ = join([expand("%"), line(".")], ":")<cr>
 nnoremap <silent> \ :NERDTreeToggle<cr>
+nnoremap <silent> <leader>z :Goyo<cr>
 
 " Language navigation
 nnoremap <silent> <leader>gd :TSDef<cr>
