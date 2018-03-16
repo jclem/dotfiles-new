@@ -19,6 +19,7 @@ Plug 'mattn/emmet-vim'
 Plug 'mattn/gist-vim'
 Plug 'mattn/webapi-vim'
 Plug 'mhartington/nvim-typescript', { 'do': 'UpdateRemotePlugins' }
+Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'rhysd/vim-crystal'
 Plug 'rizzatti/dash.vim'
