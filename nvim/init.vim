@@ -104,6 +104,23 @@ let NERDSpaceDelims=1
 let NERDTrimTrailingWhitespace=1
 let NERDDefaultAlign='left'
 
+" dash.vim
+let g:dash_activate=1
+
+" Mundo
+let g:mundo_prefer_python3=1
+let g:mundo_width=40
+let g:mundo_right=1
+
+" Gist
+let g:gist_detect_filetype=1
+let g:gist_open_browser_after_post=1
+let g:gist_show_private=1
+let g:gist_get_multiplefile=1
+
+" vim-javascript
+let g:javascript_plugin_jsdoc=1
+
 " NERDTree
 let NERDTreeNaturalSort=1
 
