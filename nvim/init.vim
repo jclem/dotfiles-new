@@ -70,6 +70,7 @@ set sidescroll=5
 set splitbelow
 set splitright
 set ttimeoutlen=100
+set wildignore+=node_modules
 
 " Wrapping/Line Breaks
 set linebreak
@@ -124,6 +125,7 @@ let g:javascript_plugin_jsdoc=1
 
 " NERDTree
 let NERDTreeNaturalSort=1
+let NERDTreeRespectWildIgnore=1
 
 " Mappings
 let mapleader = ' '
