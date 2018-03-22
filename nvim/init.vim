@@ -5,7 +5,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'benmills/vimux'
 Plug 'cespare/vim-toml'
 Plug 'christoomey/vim-tmux-navigator'
@@ -31,7 +31,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'tpope/vim-surround'
-Plug 'w0rp/ale'
+Plug 'neomake/neomake'
+" Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -71,6 +72,7 @@ set splitbelow
 set splitright
 set ttimeoutlen=100
 set wildignore+=node_modules
+set foldlevelstart=99
 
 " Wrapping/Line Breaks
 set linebreak
@@ -100,8 +102,10 @@ let deoplete#enable_at_startup=1
 let nvim_typescript#signature_complete=1
 let nvim_typescript#type_info_on_hold=1
 
-" ALE
-let g:ale_sign_error='☛'
+" neomake
+call neomake#configure#automake('w')
+call neomake#configure#automake('nw', 100)
+call neomake#configure#automake('rw', 100)
 
 " NERDCommenter
 let NERDCommentEmptyLines=1
@@ -147,14 +151,6 @@ nnoremap <silent> <leader>u :MundoToggle<cr>
 nnoremap <silent> <leader>vss :Gina status<cr>
 nnoremap <silent> <leader>% :let @+ = join([expand('%'), line('.')], ':')<cr>
 nmap <silent> <leader>d <Plug>DashSearch
-
-" Language navigation
-nnoremap <silent> <leader>gd :TSDef<cr>
-nnoremap <silent> <leader>gi :TSDoc<cr>
-nnoremap <silent> <leader>gp :TSDefPreview<cr>
-nnoremap <silent> <leader>gr :TSRefs<cr>
-nnoremap <silent> <leader>gR :TSRename<cr>
-nnoremap <silent> <leader>gt :TSType<cr>
 
 " Mappings - Window Navigation
 " nnoremap <c-h> <c-w>h
