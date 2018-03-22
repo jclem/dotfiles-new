@@ -1,4 +1,7 @@
-let g:tsuquyomi_disable_default_mappings = 1
+set foldmethod=syntax
+
+let g:tsuquyomi_disable_default_mappings=1
+
 nnoremap <silent> <leader>gd :TsuDefinition<cr>
 nnoremap <silent> <leader>ge :TsuGeterr<cr>
 nnoremap <silent> <leader>gk :TsuGoBack<cr>

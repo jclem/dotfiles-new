@@ -5,14 +5,13 @@ call plug#begin()
 Plug '$HOME/.fzf'
 Plug 'cespare/vim-toml'
 Plug '/usr/local/opt/fzf'
-Plug 'altercation/vim-colors-solarized'
 Plug 'benmills/vimux'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/gv.vim'
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
@@ -24,30 +23,21 @@ Plug 'rhysd/vim-crystal'
 Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'Shougo/unite-outline'
-Plug 'Shougo/unite.vim'
+" Plug 'Shougo/unite-outline'
+" Plug 'Shougo/unite.vim'
 Plug 'SirVer/ultisnips'
 Plug 'sjl/gundo.vim'
 Plug 'slashmili/alchemist.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tmux-plugins/vim-tmux'
 Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'tpope/vim-abolish'
+" Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
+" Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0rp/ale'
 
 call plug#end()
-
-" Functions
-function! NumberToggle()
-  if &number
-    set nonumber
-  else
-    set number
-  endif
-endfunction
 
 " Editing
 set backspace=indent,eol,start
@@ -55,48 +45,29 @@ set hidden
 set ruler
 
 " Status line
-set statusline=%f\ %y\ %h%m%r%w%=%l/%L
+set statusline=%f\ %y\ %h%m%r%w%=%c@%l/%L
 
 " Visual styling
 colorscheme Tomorrow-Night
 set background=dark
-set guifont=SF\ Mono:h13
-set guioptions=
-set colorcolumn=80
+set colorcolumn=100
 set laststatus=2
 set lazyredraw
-set linespace=1
 set list
-set nocursorline
-set nonumber
+set number
 set numberwidth=4
 set showcmd
-set showmode
-set ttyfast
 set wildmenu
 set fillchars=vert:│
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"
-autocmd ColorScheme * highlight! VertSplit ctermbg=NONE
-let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±'
-
-" Netrw
-" let g:netrw_banner=0
-" let g:netrw_liststyle=3
-" let g:netrw_browse_split=4
-" let g:netrw_altv=1
-" let g:netrw_winsize=25
-" augroup ProjectDrawer
-"   autocmd!
-"   autocmd VimEnter * :Vexplore
-" augroup END
+let &listchars='tab:▸ ,extends:❯,precedes:❮,nbsp:±,trail:·'
 
 " Searching
-set incsearch
 set hlsearch
 set ignorecase
+set incsearch
 set smartcase
-set wrapscan
 
 " Indentation
 set autoindent
@@ -107,23 +78,27 @@ set softtabstop=2
 set tabstop=2
 
 " Miscellaneous
-set ttimeout
-set ttimeoutlen=100
+set autoread
+set dictionary+=/usr/share/dict/words
 set display=truncate
-set scrolloff=5
-set sidescrolloff=5
+set foldlevelstart=99
+set listchars+=trail:·
 set mouse=a
-set wrap
-set linebreak
-set breakindent
+set report=0
+set scrolloff=5
 set showbreak=...→\ 
+set sidescrolloff=5
 set splitbelow
 set splitright
-set listchars+=trail:·
-set report=0
-set autoread
 set synmaxcol=200
-set dictionary+=/usr/share/dict/words
+set timeoutlen=500
+set ttymouse=sgr
+set wildignore+=node_modules
+
+" Wrapping/Line breaks
+set breakindent
+set linebreak
+set showbreak=...→\ 
 
 " File settings
 set backup
@@ -140,10 +115,17 @@ let g:netrw_home=$HOME.'/vim/files/'
 " Syntax highlighting
 syntax enable
 filetype plugin indent on
+highlight Comment cterm=italic
 
 " Cursor style
 let &t_SI="\033[5 q"
 let &t_EI="\033[1 q"
+
+" ALE
+let g:ale_sign_error='☛'
+let g:ale_pattern_options = {
+      \ '.*\.java$': {'ale_enabled': 0},
+      \}
 
 " Gundo
 let g:gundo_prefer_python3=1
@@ -168,6 +150,7 @@ let g:NERDDefaultAlign='left'
 " NERDTree
 let g:NERDTreeNaturalSort=1
 let g:NERDTreeIgnore=['build/']
+let g:NERDTreeRespectWildIgnore=1
 
 " tsuquyomi
 let g:tsuquyomi_definition_split=1
@@ -190,13 +173,7 @@ inoremap kj <esc>
 nnoremap <silent> <c-c> :nohlsearch<Bar>:echo<cr>""
 nnoremap <silent> <leader>u :GundoToggle<cr>
 nnoremap <silent> <leader>vss :Gstatus<cr>
-nnoremap <silent> <leader>vsp :call VimuxRunCommand("git push")<cr>
 nmap <silent> <leader>d <Plug>DashSearch
-nnoremap <leader>rr :VimuxPromptCommand<cr>
-nnoremap <silent> <leader>rp :VimuxRunLastCommand<cr>
-noremap <silent> <leader>rc :VimuxInterruptRunner<cr>
-noremap <silent> <leader>rx :VimuxCloseRunner<cr>
-noremap <silent> <leader>rz :VimuxZoomRunner<cr>
 nnoremap <silent> <leader>n :call NumberToggle()<cr>
 nnoremap <silent> ]q :cnext<cr>
 nnoremap <silent> [q :cprev<cr>
@@ -204,6 +181,16 @@ nnoremap <silent> ]Q :clast<cr>
 nnoremap <silent> [Q :cfirst<cr>
 nnoremap <silent> <leader>go :Unite outline<cr>
 nnoremap <silent> <leader>% :let @+ = join([expand("%"), line(".")], ":")<cr>
+nnoremap <silent> <leader>an :ALENextWrap<cr>
+nnoremap <silent> <leader>ap :ALEPreviousWrap<cr>
+
+" Mappings - Vimux
+nnoremap <silent> <leader>vsp :call VimuxRunCommand("git push")<cr>
+nnoremap <leader>rr :VimuxPromptCommand<cr>
+nnoremap <silent> <leader>rp :VimuxRunLastCommand<cr>
+noremap <silent> <leader>rc :VimuxInterruptRunner<cr>
+noremap <silent> <leader>rx :VimuxCloseRunner<cr>
+noremap <silent> <leader>rz :VimuxZoomRunner<cr>
 
 " Vim doesn't do normal escape with Ctrl+C
 inoremap <c-c> <esc>
