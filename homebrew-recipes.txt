@@ -1,43 +1,43 @@
-  aws-shell
-  crystal-lang
-  cscope
-  ctags
-  dep
-  elixir
-  erlang
-  ffmpeg
-  fpp
-  fswatch
-  fzf
-  git
-  heroku/brew/heroku
-  highlight
-  htop
-  httpie
-  hub
-  imagemagick
-  jq
-  macvim --with-luajit --with-python3 --with-override-system-vim
-  mosh
-  node
-  nvim
-  osxutils
-  postgresql --with-python3
-  pstree
-  pwgen
-  python
-  python3
-  reattach-to-user-namespace
-  redis
-  ruby
-  stack
-  the_silver_searcher
-  tig
-  tmux
-  tree
-  vimpager
-  wget
-  wxmac
-  yarn
-  z
-  zsh
+aws-shell
+crystal-lang
+cscope
+ctags
+dep
+elixir
+erlang
+ffmpeg
+fpp
+fswatch
+fzf
+git
+heroku/brew/heroku
+highlight
+htop
+httpie
+hub
+imagemagick
+jq
+macvim --with-luajit --with-python3 --with-override-system-vim
+mosh
+node
+nvim
+osxutils
+postgresql --with-python3
+pstree
+pwgen
+python
+python3
+reattach-to-user-namespace
+redis
+ruby
+stack
+the_silver_searcher
+tig
+tmux
+tree
+vimpager
+wget
+wxmac
+yarn
+z
+zsh
