@@ -10,7 +10,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'elixir-lang/vim-elixir'
 Plug 'fatih/vim-go'
 Plug 'junegunn/fzf.vim'
-" Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 " Plug 'junegunn/gv.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'leafgarland/typescript-vim'
@@ -138,6 +139,33 @@ let g:gist_open_browser_after_post=1
 let g:gist_show_private=1
 let g:gist_get_multiplefile=1
 
+" Goyo
+function! s:goyo_enter()
+  silent !tmux set status off
+  silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  set noshowmode
+  set noshowcmd
+  Limelight
+endfunction
+
+function! s:goyo_leave()
+  silent !tmux set status on
+  silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  set showmode
+  set showcmd
+  Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+let g:goyo_width=100
+let g:goyo_height='85%'
+
+" Limelight
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
 " vim-javascript
 let g:javascript_plugin_jsdoc=1
 
@@ -183,6 +211,7 @@ nnoremap <silent> <leader>go :Unite outline<cr>
 nnoremap <silent> <leader>% :let @+ = join([expand("%"), line(".")], ":")<cr>
 nnoremap <silent> <leader>an :ALENextWrap<cr>
 nnoremap <silent> <leader>ap :ALEPreviousWrap<cr>
+nnoremap <silent> <leader>z :Goyo<cr>
 
 " Mappings - Vimux
 nnoremap <silent> <leader>vsp :call VimuxRunCommand("git push")<cr>
