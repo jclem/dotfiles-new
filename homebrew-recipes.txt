@@ -1,4 +1,5 @@
 aws-shell
+chromedriver
 crystal-lang
 cscope
 ctags
