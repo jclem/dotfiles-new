@@ -5,6 +5,7 @@ cscope
 ctags
 dep
 elixir
+elm
 erlang
 ffmpeg
 fpp
