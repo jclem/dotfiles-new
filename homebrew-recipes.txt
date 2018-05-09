@@ -1,5 +1,6 @@
 aws-shell
 chromedriver
+chruby
 crystal-lang
 cscope
 ctags
@@ -32,6 +33,7 @@ python3
 reattach-to-user-namespace
 redis
 ruby
+ruby-install
 stack
 the_silver_searcher
 tig
