@@ -49,6 +49,10 @@ fi
 [ -f $HOME/.z.sh ] && . $HOME/.z.sh
 [ -f $HOME/.fzf.zsh ] && . $HOME/.fzf.zsh
 
+if [ -d /usr/local/opt/chruby ]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
 
 # Finally initialize completion.
 compinit
