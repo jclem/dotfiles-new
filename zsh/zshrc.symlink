@@ -53,5 +53,9 @@ if [ -d /usr/local/opt/chruby ]; then
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
 
+if [ -d /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin ]; then
+  export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
+fi
+
 # Finally initialize completion.
 compinit
