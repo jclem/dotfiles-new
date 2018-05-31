@@ -7,7 +7,6 @@ fi
 
 export EDITOR="vim"
 export ZSH_CONFIG_DIR=$CODE/dotfiles/zsh
-export TERM=xterm-256color-italic
 export PATH=$HOME/.bin:/usr/local/Cellar/node/8.1.4/bin:$PATH
 export FZF_DEFAULT_COMMAND='ag -g ""'
 export GOPATH=$CODE/go

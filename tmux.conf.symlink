@@ -5,7 +5,6 @@ unbind C-b
 
 # Options
 if-shell 'test "$(uname)" = "Darwin"' 'source ~/.tmux-osx.conf'
-set -g default-terminal "xterm-256color-italic"
 set -g focus-events on
 set -g mouse on
 set -g escape-time 1
